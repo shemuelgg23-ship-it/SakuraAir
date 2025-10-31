@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sakura Air</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ===== ESTILOS GENERALES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #fafafa;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      background: #8d0801;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      font-weight: bold;
+    }
+
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: url('https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?cs=srgb&dl=pexels-rajesh-tp-749235-2098085.jpg&fm=jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      background: #ffb703;
+      border: none;
+      color: #000;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background: #fb8500;
+    }
+
+    /* ===== MENÚ ===== */
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .plato {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .plato img {
+      width: 100%;
+      border-radius: 8px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .plato h3 {
+      margin: 10px 0;
+      color: #8d0801;
+    }
+
+    /* ===== SOBRE NOSOTROS ===== */
+    .sobre {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .sobre img {
+      flex: 1;
+      width: 25%;
+      border-radius: 8px;
+    }
+
+    .sobre div {
+      flex: 1;
+    }
+
+    /* ===== CONTACTO ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #8d0801;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #600601;
+    }
+      /* ===== TABLA NUTRICIONAL ===== */
+      .sobre img {
+      flex: 1;
+      width: 25%;
+      border-radius: 8px;
+    }
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVEGACIÓN ===== -->
+  <header>
+    <nav>
+      <h1>Sakura Air</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#sobre">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <h2>Bienvenidos a Sakura Air</h2>
+    <p>Donde la fusion y la experiencia se encuentra.</p>
+    <button onclick="window.location.href='#menu'">Ver nuestro menú</button>
+  </section>
+
+  <!-- ===== MENÚ ===== -->
+  <section id="menu">
+    <h2>🍽 Nuestro Menú</h2>
+    <div class="menu-items">
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/558284074_2938278919715963_2506989233477798587_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFClzIkq7zdK-8LOBK15j-UrNfXw2xLjjWs19fDbEuONRK86422iTrVP4_HbQDYpckki8-jh6xUOlo5M6hy9c3G&_nc_ohc=-aw2eYi1mQMQ7kNvwG0bEjX&_nc_oc=AdmWOpz8zg9mnTcqKgcAbtDzwrQe95fpcLqTdGMC39MxmEf3ujPZ0AxfDwL3-ZkyS5A&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=zGfBrjWfO1ETNDSXq64vhQ&oh=00_Affg_BYt-TMvPAbeHZztH9pcph1KqyTueafY-zFgQz6CAQ&oe=690A19A4" alt="Empanadas mandü">
+        <h3>Empanadas mandü</h3>
+        <p>Mini empanadas japonesas rellenas de carne molida de cerdo y vegetales.</p>
+        <p><b>$14.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/557765721_2938278866382635_3663137743465534183_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEqY_2pX8gDbQalDgblH4YB0Wk-w-giB-HRaT7D6CIH4cXUO2Ny_cC_ZzAHGVSy6hOLza6BnBi29JdWjp0yDf0c&_nc_ohc=0ZnmNIuXcycQ7kNvwEBTYBS&_nc_oc=AdkRLSw5yWrumWj-UW3QvO7V8P8zM78SQofJV0d6SyEAQrsPM8Lu1hoSme00wJSLQeQ&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=mIKE4WhFct9Ye_RML1xpcw&oh=00_Afcof692CW1BNy78hJGyR_DiHRPK3YTIttzmw52JRAhn2Q&oe=6909F92B" alt="Sticky Rise">
+        <h3>Sticky rice</h3>
+        <p>Arroz glutinoso acompañado de salmon salteado en mayonesa japonesa y un toque de salsa de siracha.</p>
+        <p><b>$13.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/13e44759f478c05b88697f8c66a69403/Derivates/460c1b64bb7de6de74c26c1fb369006c9ec8a141.jpg" alt="Massaman curry">
+        <h3>Massaman curry</h3>
+        <p>trozos de pollo marinados en una mezcla de especias como garam masala, cúrcuma y comino  .</p>
+        <p><b>$28.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/559058285_2938278853049303_8562324441593069026_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEq9P03V3CKPQupxo4AgJjObqfS-ECDeIlup9L4QIN4iegYHkDUETNMQSOQ6A1ShZTlqSMVAd9fUE4ZeZUctYo7&_nc_ohc=OOOCqhUYCaUQ7kNvwG2DZu4&_nc_oc=Adn4o6FZYFz1x4vlakjBY8e0ZkAYzvPmwKh7f6dOT5Ep5v5DWnJTfSN-OulN2DD26cQ&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=mx0T3TWDOfMg_eHHzn7Uqg&oh=00_AfeySn0bbMXY3oHqYd1_f27u_zEdeJX2WVlo2gu9dsX2xQ&oe=690A1666" alt="Pad Thai">
+        <h3>Pad Thai</h3>
+        <p>Pasta de arroz salteado con vegetales y lomo de cerdo salteado.</p>
+        <p><b>$32.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/559030814_2938278863049302_3863291167891714197_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEolNCoUtGk6Kh12eGPnjL7VAz-oEOorbdUDP6gQ6ittwFOWmUGveMMDGgok5gNm7x6qh44Kwdi_kQlCw3tpFYU&_nc_ohc=LjEcYmyevPEQ7kNvwEyYHGe&_nc_oc=AdmCV1g4OpQ9m1gXi2xKWj9hfAxcgurA6xxf8ORTH42f18qC3J04pg-5j74AtJuePoI&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=lnCnHdI9ZBz1IJmhfGelIQ&oh=00_AfdtEdez2pvcy1Ppn9lIitG_jvj2c1CsYYvW8dEpoth6ZA&oe=690A018A" alt="Cheesecake de miso">
+        <h3>Cheesecake de miso</h3>
+        <p>Cheesecake de miso con frutos rojos.</p>
+        <p><b>$15.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/572803960_2960816430795545_5075209490615716637_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEdnRue9lLiEi3-NitES0Xs0Xrcm5rm8mHRetybmubyYb5AWLN7159Y40IOemiDtJhTpL86pObhgw4mpdFzefKT&_nc_ohc=Z_uKILq7QukQ7kNvwEmNBF0&_nc_oc=AdmFoXCa6OYRZsg51c1gyPPRXcMZdqbp6ZtWYrrAJJPYkT9QSRdMixICiKkvjsLNqhA&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=0vnUuLC9EecKhPWdyQ_TtA&oh=00_AfdjAQv3SJZGjuO-IHlZAwuxIsN_oFb1m8ZqlTnvKiOweA&oe=690A3146" alt="Sticky Rise">
+        <h3>Mocktail ginger yuzu</h3>
+        <p>El Ginger Yuzu es un viaje sensorial que comienza en Japón, inspirado en el tradicional Yuzu, un cítrico japonés símbolo de purificación y renovación</p>
+        <p><b>$12.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/574095120_2960820840795104_1989742464908360892_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHpFdBqdTkJkxlKv13dUWr_5XgaPoQf2GPleBo-hB_YY-izIOgFP8cRo3lU03g2IuJ3OLiJ677gSuQsQIHSoTt8&_nc_ohc=f7qwHrozcScQ7kNvwEllJAX&_nc_oc=AdnQv97SQVaxYxmEIfnTkwTNO037IRtgtaSmzsZ3S4v1YnWNzmiLQLk1Ye7aewVN85o&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=TZ92jiiM6LWV19kfKA9rlQ&oh=00_Afck_RGATlyAviIMIXQGxP48rXwsP-2jBMK3z7NYimvcOg&oe=690A0153" alt="Sticky Rise">
+        <h3>Mocktail Jamaica Tonic</h3>
+        <p>El Jamaica & Laurel Tonic rinde homenaje a la armonía entre flor y hoja, un concepto muy presente en la cultura asiática.</p>
+        <p><b>$10.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://dislicoresqa.vtexassets.com/arquivos/ids/369659-800-auto?v=638696131039670000&width=800&height=auto&aspect=true" alt="Sticky Rise">
+        <h3>trapiche vineyards</h3>
+        <p>Cepa: Torrontés- Origen autóctono Argentino, derivado del cruce natural entre la uva Moscatel de Alejandría y la Criolla Chica, se dice que su desarrollo se sitúa en la región de Mendoza o La Rioja.</p>
+        <p><b>$200.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://exitocol.vtexassets.com/arquivos/ids/27142473/Vino-Syrah-Rose-Las-Moras-X-750ml-843244_a.jpg?v=638790345125800000" alt="Sticky Rise">
+        <h3>Vino Finca Las Moras</h3>
+        <p>Cepa: Syrah- Uva que cuenta con diferentes teorías en cuanto a su origen, sin embargo con un punto decisivo en la región del Ródano (Francia).</p>
+        <p><b>$220.000</b></p>
+      </div>
+      <div class="plato">
+        <img src="https://dislicoresqa.vtexassets.com/arquivos/ids/369575-800-auto?v=638695475342130000&width=800&height=auto&aspect=true" alt="Sticky Rise">
+        <h3>Vino Tinto Trapiche Reserva Pinot Noir</h3>
+        <p>Cepa: Pinot Noir- Uva de origen francés, teniendo su cuna en la región de Borgoña, esta cepa aporta ciertas características frutales, especiadas, con una acidez elevada, conjugandose con un cuerpo medio.</p>
+        <p><b>$260.000</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE NOSOTROS ===== -->
+  <section id="sobre">
+    <h2>👨‍🍳 Sobre Nosotros</h2>
+    <div class="sobre">
+      <img src="https://scontent-bog2-2.xx.fbcdn.net/v/t39.30808-6/558008342_2938274949716360_5935720051650766288_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGBECNkt8JFhYGM2GKrekRQl0G0wb1jR5CXQbTBvWNHkF7wpv3KsVg8EiTGaDYfIVyeH10OYrKCwmqr0Pe1ThIF&_nc_ohc=HtaDdcn4L5IQ7kNvwEQaPNM&_nc_oc=AdmM4f_kc9kf9STWhQhDYnPl-gMRroT3Mvg-sVvf7omzEi0zQMVucKlhLha68AQtfHA&_nc_zt=23&_nc_ht=scontent-bog2-2.xx&_nc_gid=SCJOjDPNOyL9934l-z50GQ&oh=00_AfdcuTzMxXaLJAJkzIStVdodw6-7zyiQ4AxlWvMzk7cYaw&oe=690A19AF" alt="Chef">
+      <div>
+        <p>En <b>Sakura Air</b> creemos que la comida es un puente hacia la felicidad. Nuestros chefs fusionan recetas tradicionales con un toque moderno para ofrecer una experiencia única en cada plato.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto">
+    <h2>📩 Contáctanos</h2>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+ <!-- ===== TABLA NUTRICIONAL ===== -->
+   <h2>Información sobre los ingredientes de nuestros platillos</h2>
+   <img src=""
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Sakura Air - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    function enviarFormulario(e) {
+      e.preventDefault();
+      alert("¡Gracias por contactarnos! Te responderemos pronto.");
+    }
+  </script>
+</body>
+</html>
